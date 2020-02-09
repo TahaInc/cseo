@@ -1,0 +1,365 @@
+html,
+body {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 5000px;
+    margin: 0;
+    padding: 0;
+}
+
+.soccerball {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+img.initialsoccerbackground {
+    width: 1920px;
+    height: auto;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    left: 50%;
+    top: 0%;
+    transform: translate(-50%);
+    z-index: 7;
+}
+
+img.initialsoccer {
+    width: 440px;
+    height: auto;
+    position: fixed;
+    padding: 0;
+    z-index: 8;
+    top: 60px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    opacity: 1;
+}
+
+.topbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 120px;
+    background-color: rgb(0, 0, 0);
+    z-index: 10;
+}
+
+img.toplogo {
+    width: 800px;
+    height: 800px;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -5%);
+}
+
+a.RegisterButton {
+    position: absolute;
+    top: 50%;
+    Left: 12%;
+    transform: translate(-50%, -50%);
+    width: 280px;
+    height: 50px;
+    background: #000000;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 50px;
+    color: #dadada;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: verdana;
+    letter-spacing: 4px;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+a.RegisterButton:before,
+a.RegisterButton:after,
+span.RegisterButton:before,
+span.RegisterButton:after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #dadada;
+    transition: 0.5s;
+    mix-blend-mode: hue;
+}
+
+a.RegisterButton:before {
+    top: -2px;
+    left: -2px;
+}
+
+a.RegisterButton:after {
+    top: -2px;
+    right: -2px;
+}
+
+span.RegisterButton:before {
+    bottom: -2px;
+    left: -2px;
+}
+
+span.RegisterButton:after {
+    bottom: -2px;
+    right: -2px;
+}
+
+a.RegisterButton:hover:before,
+a.RegisterButton:hover:after,
+a.RegisterButton:hover span:before,
+a.RegisterButton:hover span:after {
+    width: calc(280px/2);
+    height: calc(50px/2);
+}
+
+a.CompetitiveButton {
+    position: absolute;
+    top: 50%;
+    Left: 35%;
+    transform: translate(-50%, -50%);
+    width: 280px;
+    height: 50px;
+    background: #000000;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 50px;
+    color: #dadada;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: verdana;
+    letter-spacing: 4px;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+a.CompetitiveButton:before,
+a.CompetitiveButton:after,
+span.CompetitiveButton:before,
+span.CompetitiveButton:after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #dadada;
+    transition: 0.5s;
+    mix-blend-mode: hue;
+}
+
+a.CompetitiveButton:before {
+    top: -2px;
+    left: -2px;
+}
+
+a.CompetitiveButton:after {
+    top: -2px;
+    right: -2px;
+}
+
+span.CompetitiveButton:before {
+    bottom: -2px;
+    left: -2px;
+}
+
+span.CompetitiveButton:after {
+    bottom: -2px;
+    right: -2px;
+}
+
+a.CompetitiveButton:hover:before,
+a.CompetitiveButton:hover:after,
+a.CompetitiveButton:hover span.CompetitiveButton:before,
+a.CompetitiveButton:hover span.CompetitiveButton:after {
+    width: calc(280px/2);
+    height: calc(50px/2);
+}
+
+a.AdminButton {
+    position: absolute;
+    top: 50%;
+    Left: 65%;
+    transform: translate(-50%, -50%);
+    width: 280px;
+    height: 50px;
+    background: #000000;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 50px;
+    color: #dadada;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: verdana;
+    letter-spacing: 4px;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+a.AdminButton:before,
+a.AdminButton:after,
+span.AdminButton:before,
+span.AdminButton:after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #dadada;
+    transition: 0.5s;
+    mix-blend-mode: hue;
+}
+
+a.AdminButton:before {
+    top: -2px;
+    left: -2px;
+}
+
+a.AdminButton:after {
+    top: -2px;
+    right: -2px;
+}
+
+span.AdminButton:before {
+    bottom: -2px;
+    left: -2px;
+}
+
+span.AdminButton:after {
+    bottom: -2px;
+    right: -2px;
+}
+
+a.AdminButton:hover:before,
+a.AdminButton:hover:after,
+a.AdminButton:hover span.AdminButton:before,
+a.AdminButton:hover span.AdminButton:after {
+    width: calc(280px/2);
+    height: calc(50px/2);
+}
+
+a.PhotosButton {
+    position: absolute;
+    top: 50%;
+    Left: 88%;
+    transform: translate(-50%, -50%);
+    width: 280px;
+    height: 50px;
+    background: #000000;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 50px;
+    color: #dadada;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: verdana;
+    letter-spacing: 4px;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+a.PhotosButton:before,
+a.PhotosButton:after,
+span.PhotosButton:before,
+span.PhotosButton:after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #dadada;
+    transition: 0.5s;
+    mix-blend-mode: hue;
+}
+
+a.PhotosButton:before {
+    top: -2px;
+    left: -2px;
+}
+
+a.PhotosButton:after {
+    top: -2px;
+    right: -2px;
+}
+
+span.PhotosButton:before {
+    bottom: -2px;
+    left: -2px;
+}
+
+span.PhotosButton:after {
+    bottom: -2px;
+    right: -2px;
+}
+
+a.PhotosButton:hover:before,
+a.PhotosButton:hover:after,
+a.PhotosButton:hover span.PhotosButton:before,
+a.PhotosButton:hover span.PhotosButton:after {
+    width: calc(280px/2);
+    height: calc(50px/2);
+}
+
+.language {
+    position: relative;
+    margin: 20px auto;
+    width: 50%;
+    height: 40px;
+    border: 3px solid #0f0f0f;
+    color: #0f0f0f;
+    font-size: 22px;
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+.lang {
+    position: relative;
+    display: inline-block;
+    width: 49.6%;
+    height: 100%;
+    line-height: 40px;
+}
+
+.lang:first-child label {
+    border-radius: 5px 0 0 5px;
+}
+
+.lang:last-child label {
+    border-radius: 0 5px 5px 0;
+}
+
+.lang label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 30px;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.2s, color 0.2s, background-color 0.2s;
+}
+
+.lang input[type="radio"] {
+    appearance: none;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.lang input[type="radio"]:focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+.lang input[type="radio"]:checked~label {
+    background-color: #0f0f0f;
+    color: white;
+}
+
+.lang input[type="radio"]:active~label {
+    transform: scale(1.05);
+}
+
+main {
+    padding: 1060px 0px 0px 0px;
+}

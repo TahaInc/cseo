@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title id="title">CSEO - Accueille</title>
+    <link rel="stylesheet" href="styles/Home.css">
+    <link rel="icon" type="image/icon" href="Images/Icon.ico" />
+    <link rel="stylesheet" href="home_assets/web/assets/mobirise-icons/mobirise-icons.css">
+    <link rel="stylesheet" href="home_assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="home_assets/socicon/css/styles.css">
+    <link rel="stylesheet" href="home_assets/theme/css/style.css">
+    <link rel="stylesheet" href="home_assets/mobirise/css/mbr-additional.css" type="text/css">
+
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+
+    <script language="Javascript">
+        window.onload = function () {
+            var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent
+                .toLowerCase()));
+            if (mobile) {
+                $(document.body).css("opacity", 0);
+                alert("Ce site web n'est pas compatible pour mobile pour l'instant. Utilisez un ordinateur pour accédez au site. // This website is not compatible with mobile devices for now. Use a computer to access this website");
+            } else {
+
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("scroll", function () {
+            var scroll = $(window).scrollTop();
+            $(".initialsoccerbackground").css({
+                width: (1920 + scroll * 20) + "px"
+            })
+            $(".initialsoccerbackground").css({
+                top: ((scroll * 3) * -1) + "px"
+            })
+            $(".initialsoccer").css({
+                width: (440 + scroll * 5) + "px"
+            })
+            $(".initialsoccer").css({
+                top: ((scroll * 3 - 60) * -1) + "px"
+            })
+            $(".initialsoccer").css({
+                opacity: ((40 - scroll) / 20)
+            })
+        })
+    </script>
+    <script type="text/javascript">
+        $(window).on('beforeunload', function () {
+            $(window).scrollTop(0);
+        });
+        $(document).ready(function () {
+            var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent
+                .toLowerCase()));
+            if (mobile) {
+                $(document.body).css("opacity", 0);
+            } else {
+                $('div.hidden').fadeIn(1000).removeClass('hidden');
+            }
+        });
+        $(window).on("scroll", function () {
+            if ($(document).scrollTop() > 350) {
+                var s = 800 - Math.min(1050, $(document).scrollTop());
+                $("img.toplogo").width(s + 350).height(s + 350);
+                $("img.toplogo").css("transform", 0 + "%", s + "%");
+                $(".topbar").css("height", (s + 350) / 7 + "%");
+                $(".PhotosButton").css("opacity", 0);
+                $(".RegisterButton").css("opacity", 0);
+                $(".CompetitiveButton").css("opacity", 0);
+                $(".AdminButton").css("opacity", 0);
+                $(".soccerball").css("z-index", 10)
+                if ($(document).scrollTop() > 900) {
+                    $(".PhotosButton").css("opacity", 1);
+                    $(".RegisterButton").css("opacity", 1);
+                    $(".CompetitiveButton").css("opacity", 1);
+                    $(".AdminButton").css("opacity", 1);
+                    $(".soccerball").css("z-index", -10)
+                }
+            } else {
+                $("img.toplogo").width(800).height(800);
+                $(".topbar").css("height", 100 + "%");
+                $(".PhotosButton").css("opacity", 0);
+                $(".RegisterButton").css("opacity", 0);
+                $(".CompetitiveButton").css("opacity", 0);
+                $(".AdminButton").css("opacity", 0);
+                $(".soccerball").css("z-index", 10);
+            }
+        })
+    </script>
+</head>
+
+<body>
+    <div class="hidden" style="display: none;">
+        <header>
+            <div class="topbar">
+                <a href="Home.html"><img src="Images/Loop.gif" class="toplogo"></a>
+                <a href="Inscription.html" id="Inscription_link" class="RegisterButton"><span
+                        class="RegisterButton"></span><span id="Inscription">Inscription</span></a>
+                <a href="Compétitive.html" id="Compétitive_link" class="CompetitiveButton"><span
+                        class="CompetitiveButton"></span><span id="Compétitive">Compétitif</span></a>
+                <a href="Administration.html" id="Administration_link" class="AdminButton"><span
+                        class="AdminButton"></span><span id="Administration">Administration</span></a>
+                <a href="Photos.html" id="Photos_link" class="PhotosButton"><span class="PhotosButton"></span><span
+                        id="Photos">Photos</span></a>
+            </div>
+
+            <div class='language'>
+                <div class='lang'>
+                    <input checked id='fr' name='languages' type='radio' value='Français'>
+                    <label for='fr'>Français</label>
+                </div>
+                <div class='lang'>
+                    <input id='eng' name='languages' type='radio' value='English'>
+                    <label for='eng'>English</label>
+                </div>
+            </div>
+
+            <script type="text/javascript">
+                var Language = document.getElementById("fr");
+                var lang = (Language.checked == true) ? 'French' : 'English';
+
+                var rad = document.getElementsByName("languages");
+                var prev = null;
+                for (var i = 0; i < rad.length; i++) {
+                    rad[i].addEventListener('change', function () {
+                        (prev) ? console.log(prev.value): null;
+                        if (this !== prev) {
+                            prev = this;
+                        }
+                        ChangeLanguage();
+                    });
+                }
+
+                function ChangeLanguage() {
+                    var Language = document.getElementById("fr");
+                    var lang = (Language.checked == true) ? 'French' : 'English';
+
+                    if (lang == 'English') {
+                        document.getElementById("title").innerHTML = "CSEO - Home";
+
+                        document.getElementById("Inscription").innerHTML = "Register";
+                        document.getElementById("Inscription_link").href = "Register.html";
+                        document.getElementById("Administration").innerHTML = "Administration";
+                        document.getElementById("Administration_link").href = "Admin.html";
+                        document.getElementById("Compétitive").innerHTML = "Competitive";
+                        document.getElementById("Compétitive_link").href = "Competitive.html";
+                        document.getElementById("Photos").innerHTML = "Photos";
+                        document.getElementById("Photos_link").href = "Pictures.html";
+
+                        document.getElementById("Main_title").innerHTML = "CSEO Soccer Club";
+                        document.getElementById("Main_subtitle").innerHTML =
+                            "Sign up today and get a FREE tournament entry and uniform";
+                        document.getElementById("Inscrit_button").innerHTML = "Sign up!";
+                        document.getElementById("Inscription_button").href = "Register.html";
+
+                        document.getElementById("GroupeAge").innerHTML = "Age Group";
+                        document.getElementById("GroupeAge_desc").innerHTML =
+                            "- U5 (2014 & 2015) Mondays and wednesdays from 6:00 to 7:00<br>- U7 (2013 & 2012) Mondays and wednesdays from 7:00 to 8:00<br>- U9 (2011 & 2010) Tuesdays and thursdays from 6:00 to 7:00<br>- U13 (2009, 2008, 2007 & 2006) Tuesdays and thursdays from 7:00 to 8:00<br><br>*Girls born in 2009 play in the U9 category";
+                        document.getElementById("Terrain").innerHTML = "Field";
+                        document.getElementById("Équipment").innerHTML = "Equipment";
+                        document.getElementById("Équipment_desc").innerHTML =
+                            "A uniform will be provided to each player by their respective coach. This will include socks, shorts, and jersey.";
+                        document.getElementById("Tournois").innerHTML = "Tournament";
+                        document.getElementById("Tournois_desc").innerHTML =
+                            "At the end of the season all children (players) will benefit from a tournament that takes place in a family, friendly and sporting atmosphere. Medals will be distributed to all players.";
+
+                        document.getElementById("Accueille_bottom").innerHTML = "Home";
+                        document.getElementById("Inscription_bottom").innerHTML = "Register";
+                        document.getElementById("Inscription_link_bottom").href = "Register.html";
+                        document.getElementById("Compétitive_bottom").innerHTML = "Competitive";
+                        document.getElementById("Compétitive_link_bottom").href = "Competitive.html";
+                        document.getElementById("Administration_bottom").innerHTML = "Administration";
+                        document.getElementById("Administration_link_bottom").href = "Admin.html";
+                        document.getElementById("Photos_bottom").innerHTML = "Photos";
+                        document.getElementById("Photos_link_bottom").href = "Pictures.html";
+
+                        document.getElementById("copyright").innerHTML = "© Copyright 2019 CSEO - All Rights Reserved";
+                    } else if (lang == 'French') {
+                        document.getElementById("title").innerHTML = "CSEO - Accueille";
+
+                        document.getElementById("Inscription").innerHTML = "Inscription";
+                        document.getElementById("Inscription_link").href = "Inscription.html";
+                        document.getElementById("Administration").innerHTML = "Administration";
+                        document.getElementById("Administration_link").href = "Administration.html";
+                        document.getElementById("Compétitive").innerHTML = "Compétitif";
+                        document.getElementById("Compétitive_link").href = "Compétitive.html";
+                        document.getElementById("Photos").innerHTML = "Photos";
+                        document.getElementById("Photos_link").href = "Photos.html";
+
+                        document.getElementById("Main_title").innerHTML = "Club de soccer CSEO";
+                        document.getElementById("Main_subtitle").innerHTML =
+                            "Inscrit-toi aujourd'hui et reçois une entré du tournois et un uniforme GRATUIT";
+                        document.getElementById("Inscrit_button").innerHTML = "Inscrit-toi!";
+                        document.getElementById("Inscription_button").href = "Inscription.html";
+
+                        document.getElementById("GroupeAge").innerHTML = "Groupe d'âge";
+                        document.getElementById("GroupeAge_desc").innerHTML =
+                            "- U5 (2014 et 2015) Lundi and mercredi de 6:00 à 7:00<br>- U7 (2013 et 2012) Lundi and mercredi de 7:00 à 8:00<br>- U9 (2011 et 2010) Mardi et jeudi de 6:00 à 7:00<br>- U13 (2009, 2008, 2007 et 2006) Mardi et jeudi de 7:00 à 8:00<br><br>*Les filles nées en 2009 jouent dans la catégorie U9";
+                        document.getElementById("Terrain").innerHTML = "Terrain";
+                        document.getElementById("Équipment").innerHTML = "Équipment";
+                        document.getElementById("Équipment_desc").innerHTML =
+                            "Un uniforme sera donné à chaque joueur par leur coach respectif. Il auront accès à une pair de chaussette, des shorts et un maillot.";
+                        document.getElementById("Tournois").innerHTML = "Tournois";
+                        document.getElementById("Tournois_desc").innerHTML =
+                            "À la fin de la saison, tous les joueurs bénéficierons d'un tournois qui aura lieu dans une atmosphère familiale, sportif et amical. Des médailles seront distribué à tous les joueurs.";
+
+                        document.getElementById("Accueille_bottom").innerHTML = "Accueille";
+                        document.getElementById("Inscription_bottom").innerHTML = "Inscription";
+                        document.getElementById("Inscription_link_bottom").href = "Inscription.html";
+                        document.getElementById("Compétitive_bottom").innerHTML = "Compétitif";
+                        document.getElementById("Compétitive_link_bottom").href = "Compétitive.html";
+                        document.getElementById("Administration_bottom").innerHTML = "Administration";
+                        document.getElementById("Administration_link_bottom").href = "Administration.html";
+                        document.getElementById("Photos_bottom").innerHTML = "Photos";
+                        document.getElementById("Photos_link_bottom").href = "Photos.html";
+
+                        document.getElementById("copyright").innerHTML = "© Copyright 2019 CSEO - Tous droits réservés";
+                    };
+                };
+            </script>
+
+            <div class="soccerball">
+                <img src="Images/SoccerBall.gif" class="initialsoccer">
+                <img src="Images/MainLoad.png" class="initialsoccerbackground">
+            </div>
+            <script type="text/javascript">
+                $('a').click(function (e) {
+                    e.preventDefault();
+                    newLocation = this.href;
+                    $('body').fadeOut('slow', newpage);
+                });
+
+                function newpage() {
+                    window.location = newLocation;
+                }
+            </script>
+        </header>
+        <main>
+            <section class="header1 cid-rg14fTVUUS mbr-fullscreen mbr-parallax-background" id="header1-a">
+                <div class="mbr-overlay" style="opacity: 0.6; background-color: rgb(118, 118, 118);">
+                </div>
+
+                <div class="container">
+                    <div class="row justify-content-md-center">
+                        <div class="mbr-white col-md-10">
+                            <h1 class="mbr-section-title align-center mbr-bold pb-3 mbr-fonts-style display-1"><span
+                                    id="Main_title">Club de soccer CSEO</span></h1>
+                            <h3 class="mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style display-2"><span
+                                    id="Main_subtitle">Inscrit-toi aujourd'hui et reçois une entrée pour le tournois et
+                                    un uniforme GRATUIT</span></h3>
+
+                            <div class="mbr-section-btn align-center"><a class="btn btn-md btn-black display-4"
+                                    href="Inscription.html" id="Inscription_button">
+                                    <span class="mbr-iconfont mbri-file"></span><span
+                                        id="Inscrit_button">Inscrit-toi!</span></a></div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="accordion1 cid-rg1f881gFB" id="accordion1-e">
+                <div class="container">
+                    <div class="media-container-row">
+                        <div class="col-12 col-md-8">
+                            <div class="section-head text-center space30">
+                                <h2 class="mbr-section-title pb-5 mbr-fonts-style display-2">
+                                    CSEO FAQ</h2>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div id="bootstrap-accordion_10" class="panel-group accordionStyles accordion"
+                                role="tablist" aria-multiselectable="true">
+                                <div class="card">
+                                    <div class="card-header" role="tab" id="headingOne">
+                                        <a role="button" class="panel-title collapsed text-black" data-toggle="collapse"
+                                            data-core="" href="#collapse1_10" aria-expanded="false"
+                                            aria-controls="collapse1">
+                                            <h4 class="mbr-fonts-style display-5">
+                                                <span class="sign mbr-iconfont mbri-arrow-down inactive"></span><span
+                                                    id="GroupeAge">Groupe d'âge</span></h4>
+                                        </a>
+                                    </div>
+                                    <div id="collapse1_10" class="panel-collapse noScroll collapse " role="tabpanel"
+                                        aria-labelledby="headingOne" data-parent="#bootstrap-accordion_10">
+                                        <div class="panel-body p-4">
+                                            <p class="mbr-fonts-style panel-text display-7"><span id="GroupeAge_desc">
+                                                    - U5 (2014 et 2015) Lundi and mercredi de 6:00 à 7:00<br>-
+                                                    U7 (2013
+                                                    et 2012) Lundi and mercredi de 7:00 à 8:00<br>- U9 (2011 et
+                                                    2010) Mardi et jeudi de 6:00 à 7:00<br>- U13 (2009, 2008,
+                                                    2007 et
+                                                    2006)
+                                                    Mardi et jeudi de 7:00 à 8:00<br><br>*Les filles nées en 2009 jouent
+                                                    dans la catégorie U9</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" role="tab" id="headingTwo">
+                                        <a role="button" class="collapsed panel-title text-black" data-toggle="collapse"
+                                            data-core="" href="#collapse2_10" aria-expanded="false"
+                                            aria-controls="collapse2">
+                                            <h4 class="mbr-fonts-style display-5">
+                                                <span class="sign mbr-iconfont mbri-arrow-down inactive"></span><span
+                                                    id="Terrain">Terrain</span>
+                                            </h4>
+                                        </a>
+
+                                    </div>
+                                    <div id="collapse2_10" class="panel-collapse noScroll collapse" role="tabpanel"
+                                        aria-labelledby="headingTwo" data-parent="#bootstrap-accordion_10">
+                                        <div class="panel-body p-4">
+                                            <p class="mbr-fonts-style panel-text display-7">
+                                                Vista park, Avalon, Orleans</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" role="tab" id="headingThree">
+                                        <a role="button" class="collapsed text-black panel-title" data-toggle="collapse"
+                                            data-core="" href="#collapse3_10" aria-expanded="false"
+                                            aria-controls="collapse3">
+                                            <h4 class="mbr-fonts-style display-5">
+                                                <span class="sign mbr-iconfont mbri-arrow-down inactive"></span><span
+                                                    id="Équipment">Equipment</span>
+                                            </h4>
+                                        </a>
+                                    </div>
+                                    <div id="collapse3_10" class="panel-collapse noScroll collapse" role="tabpanel"
+                                        aria-labelledby="headingThree" data-parent="#bootstrap-accordion_10">
+                                        <div class="panel-body p-4">
+                                            <p class="mbr-fonts-style panel-text display-7"><span id="Équipment_desc">Un
+                                                    uniforme sera donné à chaque joueur par leur coach respectif. Il
+                                                    auront accès à une pair de chaussette, des shorts et un
+                                                    maillot.</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" role="tab" id="headingFour">
+                                        <a role="button" class="collapsed panel-title text-black" data-toggle="collapse"
+                                            data-core="" href="#collapse4_10" aria-expanded="false"
+                                            aria-controls="collapse4">
+                                            <h4 class="mbr-fonts-style display-5">
+                                                <span class="sign mbr-iconfont mbri-arrow-down inactive"></span><span
+                                                    id="Tournois">Tournois</span>
+                                            </h4>
+                                        </a>
+                                    </div>
+                                    <div id="collapse4_10" class="panel-collapse noScroll collapse" role="tabpanel"
+                                        aria-labelledby="headingFour" data-parent="#bootstrap-accordion_10">
+                                        <div class="panel-body p-4">
+                                            <p class="mbr-fonts-style panel-text display-7"><span id="Tournois_desc">
+                                                    À la fin de la saison, tous les joueurs bénéficierons d'un tournois
+                                                    qui aura lieu dans une atmosphère familiale, sportif et amical. Des
+                                                    médailles seront distribué à tous les joueurs.</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contacts4 cid-rg1e8duJLQ" id="contacts4-d">
+
+                <div class="main_wrapper">
+                    <div class="b_wrapper">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-md-5 p-0">
+                                    <div class="block p-5">
+                                        <div class="block_wrapper">
+                                            <h4 class="align-left mbr-fonts-style pb-4 m-0 display-5">Contact us</h4>
+                                            <p class="mbr-text align-left mbr-fonts-style pb-4 m-0 display-7">Tel: +1
+                                                (613)-323-0758<br>Email: etoilesdorleans@gmail.com</p>
+                                            <p class="mbr-text align-left mbr-fonts-style m-0 display-7">697 Brome
+                                                Crescent,
+                                                Orléans<br>ON K4A 1W2<br><br></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="google-map"><iframe frameborder="0" style="border:0"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.347433389721!2d-75.4896208847123!3d45.48294794021378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce13c7cc7f3801%3A0x920e0373cb365a31!2s697+Brome+Crescent%2C+Orl%C3%A9ans%2C+ON+K4A+1W2!5e0!3m2!1sfr!2sca!4v1548282669210"
+                            allowfullscreen=""></iframe></div>
+                </div>
+            </section>
+
+            <section once="" class="cid-rg1ro6mPk1 mbr-reveal" id="footer7-g">
+                <div class="container">
+                    <div class="media-container-row align-center mbr-white">
+                        <div class="row row-links">
+                            <ul class="foot-menu">
+                                <li class="foot-menu-item mbr-fonts-style display-7"><a href="Home.html"
+                                        style="color: white;"><strong id="Accueille_bottom">Accueille</strong></a></li>
+                                <li class="foot-menu-item mbr-fonts-style display-7"><a href="Inscription.html"
+                                        style="color: white;" id="Inscription_link_bottom"><strong
+                                            id="Inscription_bottom">Inscription</strong></a>
+                                </li>
+                                <li class="foot-menu-item mbr-fonts-style display-7"><a href="Compétitive.html"
+                                        style="color: white;" id="Compétitive_link_bottom"><strong
+                                            id="Compétitive_bottom">Compétitif</strong></a>
+                                </li>
+                                <li class="foot-menu-item mbr-fonts-style display-7"><a href="Administration.html"
+                                        style="color: white;" id="Administration_link_bottom"><strong
+                                            id="Administration_bottom">Administration</strong></a></li>
+                                <li class="foot-menu-item mbr-fonts-style display-7"><a href="Photos.html"
+                                        style="color: white;" id="Photos_link_bottom"><strong
+                                            id="Photos_bottom">Photos</strong></a></li>
+                            </ul>
+                        </div>
+                        <div class="row social-row">
+                            <div class="social-list align-right pb-2">
+                                <div class="soc-item">
+                                    <a href="https://twitter.com/Nabcha62" target="_blank">
+                                        <span class="mbr-iconfont mbr-iconfont-social socicon-twitter socicon"></span>
+                                    </a>
+                                </div>
+                                <div class="soc-item">
+                                    <a href="https://www.google.com/maps/place/697+Brome+Crescent,+Orl%C3%A9ans,+ON+K4A+1W2/@45.4829479,-75.4896209,17z/data=!3m1!4b1!4m5!3m4!1s0x4cce13c7cc7f3801:0x920e0373cb365a31!8m2!3d45.4829442!4d-75.4874322?shorturl=1"
+                                        target="_blank">
+                                        <span class="mbr-iconfont mbr-iconfont-social mbri-map-pin"></span>
+                                    </a>
+                                </div>
+                                <div class="soc-item">
+                                    <a href="tel:6133230758">
+                                        <span class="mbr-iconfont mbr-iconfont-social mbri-mobile"></span>
+                                    </a>
+                                </div>
+                                <div class="soc-item">
+                                    <a href="mailto:etoilesdorleans@gmail.com">
+                                        <span class="mbr-iconfont mbr-iconfont-social mbri-letter"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-copirayt">
+                            <p class="mbr-text mb-0 mbr-fonts-style mbr-white align-center display-7"><span
+                                    id="copyright">
+                                    © Copyright 2019 CSEO - Tous droits réservés</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <script src="home_assets/web/assets/jquery/jquery.min.js"></script>
+            <script src="home_assets/popper/popper.min.js"></script>
+            <script src="home_assets/tether/tether.min.js"></script>
+            <script src="home_assets/bootstrap/js/bootstrap.min.js"></script>
+            <script src="home_assets/smoothscroll/smooth-scroll.js"></script>
+            <script src="home_assets/parallax/jarallax.min.js"></script>
+            <script src="home_assets/mbr-switch-arrow/mbr-switch-arrow.js"></script>
+            <script src="home_assets/theme/js/script.js"></script>
+
+        </main>
+    </div>
+</body>
+
+</html>

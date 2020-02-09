@@ -1,0 +1,849 @@
+html,
+body {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 5000px;
+    margin: 0;
+    padding: 0;
+}
+
+.topbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 14.2857%;
+    background-color: rgb(0, 0, 0);
+    z-index: 10000;
+}
+
+img.toplogo {
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -5%);
+}
+
+a.RegisterButton {
+    position: absolute;
+    top: 50%;
+    Left: 12%;
+    transform: translate(-50%, -50%);
+    width: 280px;
+    height: 50px;
+    background: #000000;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 50px;
+    color: #dadada;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: verdana;
+    letter-spacing: 4px;
+    transition: 0.2s;
+}
+
+a.RegisterButton:before,
+a.RegisterButton:after,
+span.RegisterButton:before,
+span.RegisterButton:after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #dadada;
+    transition: 0.5s;
+    mix-blend-mode: hue;
+}
+
+a.RegisterButton:before {
+    top: -2px;
+    left: -2px;
+}
+
+a.RegisterButton:after {
+    top: -2px;
+    right: -2px;
+}
+
+span.RegisterButton:before {
+    bottom: -2px;
+    left: -2px;
+}
+
+span.RegisterButton:after {
+    bottom: -2px;
+    right: -2px;
+}
+
+a.RegisterButton:hover:before,
+a.RegisterButton:hover:after,
+a.RegisterButton:hover span:before,
+a.RegisterButton:hover span:after {
+    width: calc(280px/2);
+    height: calc(50px/2);
+}
+
+a.CompetitiveButton {
+    position: absolute;
+    top: 50%;
+    Left: 35%;
+    transform: translate(-50%, -50%);
+    width: 280px;
+    height: 50px;
+    background: #000000;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 50px;
+    color: #dadada;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: verdana;
+    letter-spacing: 4px;
+    transition: 0.2s;
+}
+
+a.CompetitiveButton:before,
+a.CompetitiveButton:after,
+span.CompetitiveButton:before,
+span.CompetitiveButton:after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #dadada;
+    transition: 0.5s;
+    mix-blend-mode: hue;
+}
+
+a.CompetitiveButton:before {
+    top: -2px;
+    left: -2px;
+}
+
+a.CompetitiveButton:after {
+    top: -2px;
+    right: -2px;
+}
+
+span.CompetitiveButton:before {
+    bottom: -2px;
+    left: -2px;
+}
+
+span.CompetitiveButton:after {
+    bottom: -2px;
+    right: -2px;
+}
+
+a.CompetitiveButton:hover:before,
+a.CompetitiveButton:hover:after,
+a.CompetitiveButton:hover span.CompetitiveButton:before,
+a.CompetitiveButton:hover span.CompetitiveButton:after {
+    width: calc(280px/2);
+    height: calc(50px/2);
+}
+
+a.AdminButton {
+    position: absolute;
+    top: 50%;
+    Left: 65%;
+    transform: translate(-50%, -50%);
+    width: 280px;
+    height: 50px;
+    background: #000000;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 50px;
+    color: #dadada;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: verdana;
+    letter-spacing: 4px;
+    transition: 0.2s;
+}
+
+a.AdminButton:before,
+a.AdminButton:after,
+span.AdminButton:before,
+span.AdminButton:after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #dadada;
+    transition: 0.5s;
+    mix-blend-mode: hue;
+}
+
+a.AdminButton:before {
+    top: -2px;
+    left: -2px;
+}
+
+a.AdminButton:after {
+    top: -2px;
+    right: -2px;
+}
+
+span.AdminButton:before {
+    bottom: -2px;
+    left: -2px;
+}
+
+span.AdminButton:after {
+    bottom: -2px;
+    right: -2px;
+}
+
+a.AdminButton:hover:before,
+a.AdminButton:hover:after,
+a.AdminButton:hover span.AdminButton:before,
+a.AdminButton:hover span.AdminButton:after {
+    width: calc(280px/2);
+    height: calc(50px/2);
+}
+
+a.PhotosButton {
+    position: absolute;
+    top: 50%;
+    Left: 88%;
+    transform: translate(-50%, -50%);
+    width: 280px;
+    height: 50px;
+    background: #000000;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 50px;
+    color: #dadada;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: verdana;
+    letter-spacing: 4px;
+    transition: 0.2s;
+}
+
+a.PhotosButton:before,
+a.PhotosButton:after,
+span.PhotosButton:before,
+span.PhotosButton:after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #dadada;
+    transition: 0.5s;
+    mix-blend-mode: hue;
+}
+
+a.PhotosButton:before {
+    top: -2px;
+    left: -2px;
+}
+
+a.PhotosButton:after {
+    top: -2px;
+    right: -2px;
+}
+
+span.PhotosButton:before {
+    bottom: -2px;
+    left: -2px;
+}
+
+span.PhotosButton:after {
+    bottom: -2px;
+    right: -2px;
+}
+
+a.PhotosButton:hover:before,
+a.PhotosButton:hover:after,
+a.PhotosButton:hover span.PhotosButton:before,
+a.PhotosButton:hover span.PhotosButton:after {
+    width: calc(280px/2);
+    height: calc(50px/2);
+}
+
+.form-wrapper {
+    max-width: 100%;
+    min-width: 300px;
+    padding: 50px 50px 50px 50px;
+    margin: 40px 40px 50px 40px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07);
+}
+
+.form-group {
+    position: relative;
+    margin-top: 30px;
+}
+
+.form-label {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    color: #999;
+    background-color: rgb(255, 255, 255);
+    z-index: 10;
+    transition: transform 150ms ease-out, font-size 150ms ease-out;
+}
+
+.date-label {
+    color: #999;
+    background-color: rgb(255, 255, 255);
+    z-index: 10;
+}
+
+.focused .form-label {
+    transform: translateY(-125%);
+    font-size: .75em;
+}
+
+.form-input {
+    position: relative;
+    padding: 12px 0px 5px 0;
+    width: 100%;
+    outline: 0;
+    border: 0;
+    box-shadow: 0 1px 0 0 #e5e5e5;
+    transition: box-shadow 150ms ease-out;
+}
+
+.form-input:focus {
+    box-shadow: 0 2px 0 0 blue;
+}
+
+
+.form-input.filled {
+    box-shadow: 0 2px 0 0 lightgreen;
+}
+
+#date {
+    font-family: 'PT Sans', sans-serif;
+    color: #999;
+    text-decoration: underline;
+    width: 100%;
+    font-size: 1.2rem;
+    display: block;
+    border: 0;
+    border-color: #999;
+}
+
+.styled-select {
+    background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+    height: 29px;
+    overflow: hidden;
+    width: 100%;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 2px 30px 2px 2px;
+    border: none;
+}
+
+.styled-select select {
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    height: 29px;
+    padding: 5px;
+    width: 100%;
+}
+
+.styled-select.slate {
+    background: url(http://i62.tinypic.com/2e3ybe1.jpg) no-repeat right center;
+    height: 34px;
+    width: 100%;
+}
+
+.styled-select.slate select {
+    border: 1px solid #ccc;
+    font-size: 16px;
+    height: 34px;
+    width: 100%;
+}
+
+.slate {
+    background-color: #ddd;
+}
+
+.slate select {
+    color: #999;
+}
+
+#mainselection select {
+    border: 0;
+    color: #EEE;
+    background: transparent;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 2px 10px;
+    width: 378px;
+    *width: 350px;
+    *background: #58B14C;
+    -webkit-appearance: none;
+}
+
+#mainselection {
+    overflow: hidden;
+    width: 350px;
+    -moz-border-radius: 9px 9px 9px 9px;
+    -webkit-border-radius: 9px 9px 9px 9px;
+    border-radius: 9px 9px 9px 9px;
+    box-shadow: 1px 1px 11px #330033;
+    background: #58B14C url("http://i62.tinypic.com/15xvbd5.png") no-repeat scroll 319px center;
+}
+
+select#soflow,
+select#soflow-color {
+    -webkit-appearance: button;
+    -webkit-border-radius: 2px;
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    -webkit-padding-end: 20px;
+    -webkit-padding-start: 2px;
+    -webkit-user-select: none;
+    background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+    background-position: 97% center;
+    background-repeat: no-repeat;
+    border: 1px solid #AAA;
+    color: #555;
+    font-size: inherit;
+    margin: 20px;
+    overflow: hidden;
+    padding: 5px 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 300px;
+}
+
+select#soflow-color {
+    color: #fff;
+    background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#779126, #779126 40%, #779126);
+    background-color: #779126;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    padding-left: 15px;
+}
+
+.slider-level {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider-level:hover {
+    opacity: 1;
+}
+
+.slider-level::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: rgb(29, 29, 29);
+    cursor: pointer;
+}
+
+.slider-level::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: rgb(29, 29, 29);
+    cursor: pointer;
+}
+
+.leveldescription {
+    color: rgb(73, 55, 55);
+    font-size: 20px;
+}
+
+.button {
+    background: #2B2D2F;
+    height: 50px;
+    width: 300px;
+    text-align: center;
+    position: absolute;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.text {
+    font: bold 1.25rem/1 poppins;
+    color: rgb(219, 219, 219);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-52%);
+    left: 0;
+    right: 0;
+}
+
+.toggleButton {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    z-index: 10;
+    -webkit-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: -webkit-transform .14s ease;
+    transition: transform .14s ease;
+    transition: transform .14s ease, -webkit-transform .14s ease;
+}
+
+.toggleButton:active {
+    -webkit-transform: rotateX(30deg);
+    transform: rotateX(30deg);
+}
+
+.toggleButton input {
+    display: none;
+}
+
+.toggleButton input+div {
+    border: 3px solid #e1f2d2;
+    border-radius: 50%;
+    position: relative;
+    width: 26px;
+    height: 26px;
+}
+
+.toggleButton input+div svg {
+    fill: none;
+    stroke-width: 3.6;
+    stroke: #e1f2d2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    width: 26px;
+    height: 26px;
+    display: block;
+    position: absolute;
+    left: -3px;
+    top: -3px;
+    right: -3px;
+    bottom: -3px;
+    z-index: 1;
+    stroke-dashoffset: 124.6;
+    stroke-dasharray: 0 162.6 133 29.6;
+    transition: all .4s ease 0s;
+}
+
+.toggleButton input+div:before,
+.toggleButton input+div:after {
+    content: '';
+    width: 3px;
+    height: 16px;
+    background: #e1f2d2;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 5px;
+}
+
+.toggleButton input+div:before {
+    opacity: 0;
+    -webkit-transform: scale(0.3) translate(-50%, -50%) rotate(45deg);
+    transform: scale(0.3) translate(-50%, -50%) rotate(45deg);
+    -webkit-animation: bounceInBefore .3s linear forwards .3s;
+    animation: bounceInBefore .3s linear forwards .3s;
+}
+
+.toggleButton input+div:after {
+    opacity: 0;
+    -webkit-transform: scale(0.3) translate(-50%, -50%) rotate(-45deg);
+    transform: scale(0.3) translate(-50%, -50%) rotate(-45deg);
+    -webkit-animation: bounceInAfter .3s linear forwards .3s;
+    animation: bounceInAfter .3s linear forwards .3s;
+}
+
+.toggleButton input:checked+div svg {
+    stroke-dashoffset: 162.6;
+    stroke-dasharray: 0 162.6 28 134.6;
+    transition: all .4s ease .2s;
+}
+
+.toggleButton input:checked+div:before {
+    opacity: 0;
+    -webkit-transform: scale(0.3) translate(-50%, -50%) rotate(45deg);
+    transform: scale(0.3) translate(-50%, -50%) rotate(45deg);
+    -webkit-animation: bounceInBeforeDont .3s linear forwards 0s;
+    animation: bounceInBeforeDont .3s linear forwards 0s;
+}
+
+.toggleButton input:checked+div:after {
+    opacity: 0;
+    -webkit-transform: scale(0.3) translate(-50%, -50%) rotate(-45deg);
+    transform: scale(0.3) translate(-50%, -50%) rotate(-45deg);
+    -webkit-animation: bounceInAfterDont .3s linear forwards 0s;
+    animation: bounceInAfterDont .3s linear forwards 0s;
+}
+
+@-webkit-keyframes bounceInBefore {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0.3) translate(-50%, -50%) rotate(45deg);
+        transform: scale(0.3) translate(-50%, -50%) rotate(45deg);
+    }
+
+    50% {
+        opacity: 0.9;
+        -webkit-transform: scale(1.1) translate(-50%, -50%) rotate(45deg);
+        transform: scale(1.1) translate(-50%, -50%) rotate(45deg);
+    }
+
+    80% {
+        opacity: 1;
+        -webkit-transform: scale(0.89) translate(-50%, -50%) rotate(45deg);
+        transform: scale(0.89) translate(-50%, -50%) rotate(45deg);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1) translate(-50%, -50%) rotate(45deg);
+        transform: scale(1) translate(-50%, -50%) rotate(45deg);
+    }
+}
+
+@keyframes bounceInBefore {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0.3) translate(-50%, -50%) rotate(45deg);
+        transform: scale(0.3) translate(-50%, -50%) rotate(45deg);
+    }
+
+    50% {
+        opacity: 0.9;
+        -webkit-transform: scale(1.1) translate(-50%, -50%) rotate(45deg);
+        transform: scale(1.1) translate(-50%, -50%) rotate(45deg);
+    }
+
+    80% {
+        opacity: 1;
+        -webkit-transform: scale(0.89) translate(-50%, -50%) rotate(45deg);
+        transform: scale(0.89) translate(-50%, -50%) rotate(45deg);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1) translate(-50%, -50%) rotate(45deg);
+        transform: scale(1) translate(-50%, -50%) rotate(45deg);
+    }
+}
+
+@-webkit-keyframes bounceInAfter {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0.3) translate(-50%, -50%) rotate(-45deg);
+        transform: scale(0.3) translate(-50%, -50%) rotate(-45deg);
+    }
+
+    50% {
+        opacity: 0.9;
+        -webkit-transform: scale(1.1) translate(-50%, -50%) rotate(-45deg);
+        transform: scale(1.1) translate(-50%, -50%) rotate(-45deg);
+    }
+
+    80% {
+        opacity: 1;
+        -webkit-transform: scale(0.89) translate(-50%, -50%) rotate(-45deg);
+        transform: scale(0.89) translate(-50%, -50%) rotate(-45deg);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1) translate(-50%, -50%) rotate(-45deg);
+        transform: scale(1) translate(-50%, -50%) rotate(-45deg);
+    }
+}
+
+@keyframes bounceInAfter {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0.3) translate(-50%, -50%) rotate(-45deg);
+        transform: scale(0.3) translate(-50%, -50%) rotate(-45deg);
+    }
+
+    50% {
+        opacity: 0.9;
+        -webkit-transform: scale(1.1) translate(-50%, -50%) rotate(-45deg);
+        transform: scale(1.1) translate(-50%, -50%) rotate(-45deg);
+    }
+
+    80% {
+        opacity: 1;
+        -webkit-transform: scale(0.89) translate(-50%, -50%) rotate(-45deg);
+        transform: scale(0.89) translate(-50%, -50%) rotate(-45deg);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1) translate(-50%, -50%) rotate(-45deg);
+        transform: scale(1) translate(-50%, -50%) rotate(-45deg);
+    }
+}
+
+@-webkit-keyframes bounceInBeforeDont {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(1) translate(-50%, -50%) rotate(45deg);
+        transform: scale(1) translate(-50%, -50%) rotate(45deg);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(0.3) translate(-50%, -50%) rotate(45deg);
+        transform: scale(0.3) translate(-50%, -50%) rotate(45deg);
+    }
+}
+
+@keyframes bounceInBeforeDont {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(1) translate(-50%, -50%) rotate(45deg);
+        transform: scale(1) translate(-50%, -50%) rotate(45deg);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(0.3) translate(-50%, -50%) rotate(45deg);
+        transform: scale(0.3) translate(-50%, -50%) rotate(45deg);
+    }
+}
+
+@-webkit-keyframes bounceInAfterDont {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(1) translate(-50%, -50%) rotate(-45deg);
+        transform: scale(1) translate(-50%, -50%) rotate(-45deg);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(0.3) translate(-50%, -50%) rotate(-45deg);
+        transform: scale(0.3) translate(-50%, -50%) rotate(-45deg);
+    }
+}
+
+@keyframes bounceInAfterDont {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(1) translate(-50%, -50%) rotate(-45deg);
+        transform: scale(1) translate(-50%, -50%) rotate(-45deg);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(0.3) translate(-50%, -50%) rotate(-45deg);
+        transform: scale(0.3) translate(-50%, -50%) rotate(-45deg);
+    }
+}
+
+.contain {
+    position: relative;
+}
+
+#goalie {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 475%);
+    -ms-transform: translate(-50%, 475%);
+}
+
+#leftdefense {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-450%, 200%);
+    -ms-transform: translate(-450%, 200%);
+}
+
+#centerleftdefense {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-200%, 220%);
+    -ms-transform: translate(-200%, 220%);
+}
+
+#centerrightdefense {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(120%, 220%);
+    -ms-transform: translate(120%, 220%);
+}
+
+#rightdefense {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(350%, 200%);
+    -ms-transform: translate(-350%, 200%);
+}
+
+#leftmidfield {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-390%, -50%);
+    -ms-transform: translate(-390%, -50%);
+}
+
+#centermidfield {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    -ms-transform: translate(-50%, -80%);
+}
+
+#rightmidfield {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(270%, -50%);
+    -ms-transform: translate(270%, -50%);
+}
+
+#leftattack {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-390%, -350%);
+    -ms-transform: translate(-390%, -350%);
+}
+
+#centerattack {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -400%);
+    -ms-transform: translate(-50%, -400%);
+}
+
+#rightattack {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(270%, -350%);
+    -ms-transform: translate(270%, -350%);
+}
+
+#submit {
+    width: 90%;
+    height: 60px;
+    border-radius: 7px;
+    font-size: 20px;
+    background-color: #149dcc;
+    border: 0px;
+}
