@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <title id="title">CSEO - Accueille</title>
     <link rel="stylesheet" href="styles/Home.css">
-    <link rel="icon" type="image/icon" href="Images/Icon.ico" />
+    <link rel="icon" type="image/icon" href="assets/Icon.ico" />
     <link rel="stylesheet" href="home_assets/web/assets/mobirise-icons/mobirise-icons.css">
     <link rel="stylesheet" href="home_assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="home_assets/socicon/css/styles.css">
@@ -95,7 +95,7 @@
     <div class="hidden" style="display: none;">
         <header>
             <div class="topbar">
-                <a href="Home.html"><img src="Images/Loop.gif" class="toplogo"></a>
+                <a href="Home.html"><img src="assets/Loop.gif" class="toplogo"></a>
                 <a href="Inscription.html" id="Inscription_link" class="RegisterButton"><span
                         class="RegisterButton"></span><span id="Inscription">Inscription</span></a>
                 <a href="Compétitive.html" id="Compétitive_link" class="CompetitiveButton"><span
@@ -125,7 +125,7 @@
                 var prev = null;
                 for (var i = 0; i < rad.length; i++) {
                     rad[i].addEventListener('change', function () {
-                        (prev) ? console.log(prev.value): null;
+                        (prev) ? console.log(prev.value) : null;
                         if (this !== prev) {
                             prev = this;
                         }
@@ -222,8 +222,8 @@
             </script>
 
             <div class="soccerball">
-                <img src="Images/SoccerBall.gif" class="initialsoccer">
-                <img src="Images/MainLoad.png" class="initialsoccerbackground">
+                <img src="assets/SoccerBall.gif" class="initialsoccer">
+                <img src="assets/MainLoad.png" class="initialsoccerbackground">
             </div>
             <script type="text/javascript">
                 $('a').click(function (e) {
@@ -279,7 +279,8 @@
                                             aria-controls="collapse1">
                                             <h4 class="mbr-fonts-style display-5">
                                                 <span class="sign mbr-iconfont mbri-arrow-down inactive"></span><span
-                                                    id="GroupeAge">Groupe d'âge</span></h4>
+                                                    id="GroupeAge">Groupe d'âge</span>
+                                            </h4>
                                         </a>
                                     </div>
                                     <div id="collapse1_10" class="panel-collapse noScroll collapse " role="tabpanel"

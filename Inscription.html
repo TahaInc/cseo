@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <title>CSEO - Register</title>
     <link rel="stylesheet" href="styles/Register.css">
-    <link rel="icon" type="image/icon" href="Images/Icon.ico" />
+    <link rel="icon" type="image/icon" href="assets/Icon.ico" />
     <link rel="stylesheet" href="register_assets/web/assets/mobirise-icons/mobirise-icons.css">
     <link rel="stylesheet" href="register_assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="register_assets/socicon/css/styles.css">
@@ -27,7 +27,7 @@
     <div class="hidden" style="display: none;">
         <header>
             <div class="topbar">
-                <a href="Home.html"><img src="Images/Loop.gif" class="toplogo"></a>
+                <a href="Home.html"><img src="assets/Loop.gif" class="toplogo"></a>
                 <a href="Inscription.html" class="RegisterButton"><span class="RegisterButton"></span>Inscription</a>
                 <a href="Compétitive.html" class="CompetitiveButton"><span
                         class="CompetitiveButton"></span>Compétitif</a>
@@ -318,7 +318,8 @@
                                         <h4 class="mbr-content-title mbr-bold mbr-fonts-style display-7">Poste</h4>
                                         <p class="mbr-content-text mbr-fonts-style display-7">
                                             Envoyez votre chèque à l'address suivante: 697 Brome Crescent
-                                            <br>Orléans, ON K4A 1W2.&nbsp;Les chèques sont payable à “C.S.E.O.”</p>
+                                            <br>Orléans, ON K4A 1W2.&nbsp;Les chèques sont payable à “C.S.E.O.”
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -333,7 +334,8 @@
                                         <p class="mbr-content-text mbr-fonts-style display-7">Si vous ne voulez pas
                                             payer pour la poste, vous pouvez fixer une date avec l'administration et le
                                             livrer en personne dans l'addresse suivante: 697 Brome Crescent
-                                            <br>Orléans, ON K4A 1W2</p>
+                                            <br>Orléans, ON K4A 1W2
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -488,7 +490,7 @@
                                             var n = 5;
                                             var val = this.selectedIndex;
                                             if ((this.selectedIndex < ($(this).find('option').length - n)) && (
-                                                    this
+                                                this
                                                     .selectedIndex > n)) {
                                                 this.selectedIndex += n;
                                                 this.selectedIndex -= (2 * n);
@@ -503,7 +505,7 @@
                                             var n = 5;
                                             var val = this.selectedIndex;
                                             if ((this.selectedIndex < ($(this).find('option').length - n)) && (
-                                                    this
+                                                this
                                                     .selectedIndex > n)) {
                                                 this.selectedIndex += n;
                                                 this.selectedIndex -= (2 * n);
@@ -662,7 +664,7 @@
                                     </div>
                                 </label>
 
-                                <img src="Images/soccer_field.jpg" width="300px" height="auto"
+                                <img src="assets/soccer_field.jpg" width="300px" height="auto"
                                     style="padding: 0px 10px 10px 10px">
                             </div>
                             <br />
@@ -848,7 +850,7 @@
                                             PostPreferedPositions: PreferedPositions,
                                             PostCompetitive: Competitive
                                         },
-                                        success: function (res) {}
+                                        success: function (res) { }
                                     });
                                 };
                             </script>
